@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erico’s Craft Work | MMU Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&family=Playfair+Display:ital,wght@0,900;1,900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pink: #ff7eb3;
+            --purple: #bf5af2;
+            --blue: #0a84ff;
+            --dark: #000000;
+            --glass: rgba(255, 255, 255, 0.8);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f0f2f5;
+            color: var(--dark);
+        }
+
+        /* --- Animated Glowing Logo --- */
+        @keyframes logoGlow {
+            0% { transform: scale(1); box-shadow: 0 0 10px var(--pink); }
+            50% { transform: scale(1.05); box-shadow: 0 0 30px var(--purple); }
+            100% { transform: scale(1); box-shadow: 0 0 10px var(--pink); }
+        }
+
+        .logo-wrap {
+            text-decoration: none;
+            display: inline-block;
+            background: linear-gradient(45deg, var(--pink), var(--purple));
+            color: white;
+            padding: 12px 24px;
+            border-radius: 20px;
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: 1.5rem;
+            animation: logoGlow 3s infinite ease-in-out;
+        }
+
+        nav {
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        /* --- Hero --- */
+        header {
+            text-align: center;
+            padding: 6rem 5% 4rem;
+        }
+
+        .mmu-badge {
+            background: var(--dark);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3rem, 12vw, 6rem);
+            margin: 1.5rem 0;
+            line-height: 0.9;
+        }
+
+        /* --- Gallery Grid --- */
+        .gallery-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 5% 5rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .category-card {
+            position: relative;
+            border-radius: 30px;
+            overflow: hidden;
+            aspect-ratio: 4/5;
+            text-decoration: none;
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .category-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 40px 80px rgba(0,0,0,0.2);
+        }
+
+        .category-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .category-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .card-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+        }
+
+        .card-overlay h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* --- WhatsApp Floating --- */
+        .wa-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            color: white;
+            padding: 18px 30px;
+            border-radius: 50px;
+            font-weight: 800;
+            text-decoration: none;
+            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.4);
+            z-index: 2000;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .wa-btn:hover { transform: translateY(-5px); background: #1eb954; }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 5rem 5%;
+            text-align: center;
+        }
+
+        .contact-info {
+            font-size: 1.2rem;
+            margin-top: 2rem;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="logo-wrap">Erico's Craft.</a>
+        <div style="font-weight: 800; font-size: 0.8rem;">EST. 2026</div>
+    </nav>
+
+    <header>
+        <span class="mmu-badge">📍 Maasai Mara University</span>
+        <h1>Capture <br><i>The Vibe.</i></h1>
+        <p>Ericko's Portrait Studio. Click any board to explore on Pinterest.</p>
+    </header>
+
+    <div class="gallery-container">
+        <div class="grid">
+            
+            <a href="https://www.pinterest.com/" target="_blank" class="category-card">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=500" alt="Portraits">
+                <div class="card-overlay"><h3>01. MMU Campus Life</h3></div>
+            </a>
+
+            <a href="https://www.pinterest.com/" target="_blank" class="category-card">
+                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=500" alt="Male Headshots">
+                <div class="card-overlay"><h3>02. Bold Men's Portraits</h3></div>
+            </a>
+
+            <a href="https://www.pinterest.com/" target="_blank" class="category-card">
+                <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=500" alt="Studio">
+                <div class="card-overlay"><h3>03. Neon Studio Work</h3></div>
+            </a>
+
+            <a href="https://www.pinterest.com/" target="_blank" class="category-card">
+                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=500" alt="Fashion">
+                <div class="card-overlay"><h3>04. High Fashion</h3></div>
+            </a>
+
+            <a href="https://www.pinterest.com/" target="_blank" class="category-card">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=500" alt="Monochrome">
+                <div class="card-overlay"><h3>05. The Noir Series</h3></div>
+            </a>
+
+            <a href="https://www.pinterest.com/" target="_blank" class="category-card">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=500" alt="Streetwear">
+                <div class="card-overlay"><h3>06. Street Vibes</h3></div>
+            </a>
+
+            <a href="https://www.pinterest.com/" target="_blank" class="category-card">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=500" alt="Graduation">
+                <div class="card-overlay"><h3>07. Class of 2026</h3></div>
+            </a>
+
+            <a href="https://www.pinterest.com/" target="_blank" class="category-card">
+                <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=500" alt="Lifestyle">
+                <div class="card-overlay"><h3>08. Sunset Session</h3></div>
+            </a>
+
+            <a href="https://www.pinterest.com/" target="_blank" class="category-card">
+                <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=500" alt="Group">
+                <div class="card-overlay"><h3>09. The Squad</h3></div>
+            </a>
+
+            <a href="https://www.pinterest.com/" target="_blank" class="category-card">
+                <img src="https://images.unsplash.com/photo-1488161628813-04466f872be2?q=80&w=500" alt="Film">
+                <div class="card-overlay"><h3>10. Vintage Film</h3></div>
+            </a>
+
+            <a href="https://www.pinterest.com/" target="_blank" class="category-card">
+                <img src="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?q=80&w=500" alt="Outdoor">
+                <div class="card-overlay"><h3>11. Mara Wildness</h3></div>
+            </a>
+
+            <a href="https://www.pinterest.com/" target="_blank" class="category-card">
+                <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=500" alt="Portfolio">
+                <div class="card-overlay"><h3>12. Branding</h3></div>
+            </a>
+
+        </div>
+    </div>
+
+    <a href="https://wa.me/254785321343?text=Hi%20Ericko,%20I%20love%20your%20craft!%20I'd%20like%20to%20book%20a%20shoot." class="wa-btn" target="_blank">
+        <span>Book via WhatsApp</span>
+    </a>
+
+    <footer>
+        <h2>Let's Make Art.</h2>
+        <div class="contact-info">
+            Phone: 0785321343<br>
+            Location: Maasai Mara University, Narok
+        </div>
+        <p style="margin-top: 3rem; opacity: 0.4;">&copy; 2026 Erico’s Craft Work.</p>
+    </footer>
+
+</body>
+</html>
